@@ -1,4 +1,4 @@
-unction openInvitation() {
+function openInvitation() {
     document.getElementById("details").classList.remove("hidden");
 }
 
@@ -19,10 +19,8 @@ async function sendAnswer(action) {
             })
         });
 
-        const data = await response.json();
-
         if (!response.ok) {
-            throw new Error(data.error);
+            throw new Error("Ошибка отправки");
         }
 
         result.textContent = action === "yes"
@@ -31,5 +29,4 @@ async function sendAnswer(action) {
 
     } catch (error) {
         result.textContent = "Не удалось отправить ответ.";
-        console.error(error);
     }
