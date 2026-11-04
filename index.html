@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="invitation">
+        <div class="heart">♡</div>
+
+        <p class="subtitle">A LITTLE INVITATION</p>
+
+        <h1>У меня есть для тебя<br>кое-что особенное...</h1>
+
+        <p class="description">
+            Я хочу пригласить тебя провести
+            один прекрасный вечер вместе.
+        </p>
+
+        <button onclick="openInvitation()">
+            Открыть приглашение
+        </button>
+
+        <section id="details" class="hidden">
+            <h2>Ты придёшь?</h2>
+            <button onclick="sendAnswer('yes')">Да, с удовольствием ❤️</button>
+            <button onclick="sendAnswer('no')">К сожалению, нет</button>
+            <p id="result"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
